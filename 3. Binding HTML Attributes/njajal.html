@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+   <div id="hello">
+     Nama : <input type="text" placeholder="Masukan nama anda" v-model="nama">
+    <h1>Hello {{ nama }} !<br>Apakabar ?</h1>
+  </div>
+
+    <script type="text/javascript">
+      new Vue({
+        el: '#hello',
+        data:{
+          nama: ''
+        }
+      });
+    </script>
+  </body>
+</html>
