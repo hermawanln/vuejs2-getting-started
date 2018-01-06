@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="increment">Increment</button>
+      <p>Counter : {{ counter }}</p>
+      <p>Clicks : {{ clicks }}</p>
+    </div>
+    <script type="text/javascript">
+      /**VueJS Script**/
+      new Vue({
+        el: '#app',
+        data: {
+          // counter:0, //counter di data dihapus jika ingin mendeklarasikannya di computed - counter
+          clicks:0
+        },
+        methods: {
+          increment() {
+            // this.counter = this.counter + 2;
+            this.clicks++;
+            // this.counter = this.clicks * 2; //ini jadi computed dibawah
+          }
+        },
+        computed: {
+          counter() {
+            return this.clicks * 2;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
