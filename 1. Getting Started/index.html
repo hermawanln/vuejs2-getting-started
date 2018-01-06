@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div id="app">
+      <b>{{ massage }}</b> <!--cara output {{ nama_data }}-->
+      <p>{{ massage }}</p>
+      {{ massage }}
+      <p>{{ njajal }}</p>
+    </div>
+    <script type="text/javascript">
+      alert("Ini adalah Getting Started belajar VueJS");
+      new Vue({
+        el: '#app',
+        data: {
+          massage : 'Hello World!', //ini adalah property
+          njajal : 'Sinau VueJS!'
+        }
+      });
+    </script>
+  </body>
+</html>
